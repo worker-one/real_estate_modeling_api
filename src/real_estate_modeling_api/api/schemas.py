@@ -35,5 +35,18 @@ class User(UserBase):
 class Message(BaseModel):
     message: str
 
-class HelloResponse(BaseModel):
-    message: str
+# Input schema for prediction request
+class PredictionRequest(BaseModel):
+    metro: str
+    okrug: str
+    city: str
+    category: str
+    condition: str
+    area: float
+    floor: int
+    total_floors: int
+    time_to_station: int
+    transport: str
+    latitude: float
+    longitude: float
+    model: str

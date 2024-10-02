@@ -3,13 +3,13 @@ import logging
 import uvicorn
 from fastapi import FastAPI
 from omegaconf import OmegaConf
-from service_rest_api_template.api.routes import hello, items, users
-from service_rest_api_template.db.database import create_tables
+from real_estate_modeling_api.api.routes import items, model, users
+from real_estate_modeling_api.db.database import create_tables
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def create_app(config_path: str = "src/service_rest_api_template/conf/config.yaml") -> FastAPI:
+def create_app(config_path: str = "src/real_estate_modeling_api/conf/config.yaml") -> FastAPI:
     """
     Create a FastAPI application with the specified configuration.
     Args:
@@ -24,13 +24,13 @@ def create_app(config_path: str = "src/service_rest_api_template/conf/config.yam
 
     api_router.include_router(users.router, prefix="/users", tags=["users"])
     api_router.include_router(items.router, prefix="/items", tags=["items"])
-    api_router.include_router(hello.router, prefix="/hello", tags=["hello"])
+    api_router.include_router(model.router, prefix="/model", tags=["model"])
 
     return api_router
 
 
 if __name__ == "__main__":
-    config_path = "src/service_rest_api_template/conf/config.yaml"
+    config_path = "src/real_estate_modeling_api/conf/config.yaml"
     config = OmegaConf.load(config_path)
     create_tables()
     app = create_app(config_path)

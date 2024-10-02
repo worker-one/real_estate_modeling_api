@@ -1,8 +1,8 @@
 import logging
 
 from fastapi import APIRouter, HTTPException
-from service_rest_api_template.api import schemas
-from service_rest_api_template.db import crud
+from real_estate_modeling_api.api import schemas
+from real_estate_modeling_api.db import crud
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

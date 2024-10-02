@@ -1,7 +1,7 @@
 import logging
 
-from service_rest_api_template.db.database import get_session
-from service_rest_api_template.db.models import Item, User
+from real_estate_modeling_api.db.database import get_session
+from real_estate_modeling_api.db.models import Item, User
 from sqlalchemy.orm import Session
 
 logging.basicConfig(level=logging.INFO)

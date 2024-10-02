@@ -26,4 +26,4 @@ ENV PYTHONUNBUFFERED=1
 EXPOSE 8000
 
 # Define the command to run the application
-CMD ["python", "src/service_rest_api_template/api/main.py"]
+CMD ["python", "src/real_estate_modeling_api/api/main.py"]
