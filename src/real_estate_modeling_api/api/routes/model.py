@@ -1,11 +1,13 @@
-import pickle
 import logging
+import os
+import pickle
+
 import pandas as pd
 from fastapi import APIRouter
 from geopy.distance import great_circle
+
 from real_estate_modeling_api.api import schemas
 from real_estate_modeling_api.db import crud
-import os
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

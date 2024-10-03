@@ -50,3 +50,7 @@ class PredictionRequest(BaseModel):
     latitude: float
     longitude: float
     model: str
+
+class EligibilityRequest(BaseModel):
+    area: float
+    floor: int
