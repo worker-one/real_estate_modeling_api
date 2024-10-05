@@ -3,7 +3,7 @@ import logging
 import uvicorn
 from fastapi import FastAPI
 from omegaconf import OmegaConf
-from real_estate_modeling_api.api.routes import items, model, users
+from real_estate_modeling_api.api.routes import items, model, users, eligibility
 from real_estate_modeling_api.db.database import create_tables
 
 logging.basicConfig(level=logging.INFO)
@@ -25,6 +25,7 @@ def create_app(config_path: str = "src/real_estate_modeling_api/conf/config.yaml
     api_router.include_router(users.router, prefix="/users", tags=["users"])
     api_router.include_router(items.router, prefix="/items", tags=["items"])
     api_router.include_router(model.router, prefix="/model", tags=["model"])
+    api_router.include_router(eligibility.router, prefix="/eligibility", tags=["eligibility"])
 
     return api_router
 
