@@ -6,7 +6,7 @@ api:
   port: 8000
 service:
   eligibility:
-    items:
+    building:
       - name: Алкомаркеты
         min_area: 60.0
         max_area: 400.0
@@ -359,3 +359,99 @@ service:
         min_area: 180.0
         max_area: 1500.0
         floors: null
+    land:
+      - name: Супермаркеты
+        min_area: 500.0
+        max_area: 15000.0
+        rent: false
+        sell: false
+
+      - name: Магнит у дома
+        min_area: 900.0
+        max_area: 3000.0
+        rent: true
+        sell: true
+
+      - name: "Магнит - косметик"
+        min_area: 480.0
+        max_area: 2000.0
+        rent: true
+        sell: true
+
+      - name: Пятерочка
+        min_area: 750.0
+        max_area: 3000.0
+        rent: false
+        sell: false
+
+      - name: Лента супемаркеты
+        min_area: 4000.0
+        max_area: 15000.0
+        rent: false
+        sell: false
+
+      - name: Авоська
+        min_area: 1000.0
+        max_area: 3000.0
+        rent: false
+        sell: false
+
+      - name: Гипермаркеты
+        min_area: 3000.0
+        max_area: 200000.0
+        rent: true
+        sell: true
+
+      - name: Магнит гипермаркет и семейный
+        min_area: 3000.0
+        max_area: 30000.0
+        rent: true
+        sell: true
+
+      - name: Ашан
+        min_area: 20000.0
+        max_area: 200000.0
+        rent: false
+        sell: false
+
+      - name: Лента гипермаркеты
+        min_area: 15000.0
+        max_area: 60000.0
+        rent: false
+        sell: false
+
+      - name: Распределительные центры
+        min_area: 40000.0
+        max_area: null
+        rent: false
+        sell: false
+
+      - name: Распределительный центр x5
+        min_area: 40000.0
+        max_area: null
+        rent: false
+        sell: false
+
+      - name: Общепит
+        min_area: 1500.0
+        max_area: 5000.0
+        rent: true
+        sell: true
+
+      - name: Бургеркинг
+        min_area: 1800.0
+        max_area: 5000.0
+        rent: false
+        sell: false
+
+      - name: Вкусно и точка
+        min_area: 1500.0
+        max_area: 2500.0
+        rent: false
+        sell: false
+
+      - name: Ростикс
+        min_area: 1800.0
+        max_area: 5000.0
+        rent: false
+        sell: false
